@@ -33,7 +33,7 @@ IN	N Z S Z="^"		; PIECE
 	. R *%:0 I %'=-1 S LKEY=$C(%)
 	. D LP H LHANG
 	W # Q
-LP	N CELL,CS,FP,MX,MY,NBODY,RX,RY,SEQ,X,Y
+LP	N CELL,CS,FP,MX,MY,RX,RY,SEQ,X,Y
 	S SEQ="",CS=1
 	I $ZCVT(LKEY,"U")="A" D
 	. I ($D(MVDIR(1,0)))&&(SIZE>1) Q
@@ -75,7 +75,7 @@ LP	N CELL,CS,FP,MX,MY,NBODY,RX,RY,SEQ,X,Y
 	. . . I $D(BODY(SEQ,X,Y)) D
 	. . . . W " "_TL("PLAYER")
 	. . . . S FP=1
-	. . IF 'FP W " "_BOARD(X,Y)
+	. . I 'FP W " "_BOARD(X,Y)
 	W !,"SCORE....: "_SIZE
 	W !,"MAX SCORE: "_$G(^MAXSIZE) W !
 	Q
