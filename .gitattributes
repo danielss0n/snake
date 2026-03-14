@@ -1,0 +1,3 @@
+*.mac linguist-language=ObjectScript
+*.int linguist-language=ObjectScript
+*.cls linguist-language=ObjectScript
